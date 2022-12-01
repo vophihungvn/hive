@@ -1,7 +1,8 @@
-hive_generator:
-  import: "package:hive_generator/hive_generator.dart"
-  builder_factories: ["getBuilder"]
-  build_extensions: { ".dart": [".hive.dart"] }
-  auto_apply: dependents
-  build_to: source
-  runs_before: ["json_serializable|json_serializable"]
+builders:
+  hive_generator:
+    import: "package:hive_generator/hive_generator.dart"
+    builder_factories: ["getBuilder"]
+    build_extensions: { ".dart": [".hive.dart"] }
+    auto_apply: dependents
+    build_to: source
+    runs_before: ["json_serializable|json_serializable"]
